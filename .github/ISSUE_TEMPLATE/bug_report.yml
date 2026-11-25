@@ -1,0 +1,57 @@
+name: 🐞 Bug report
+description: Something broken or behaving unexpectedly on freeupscale.app
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping make freeupscale better!
+        **Don't attach private images** — use a picture you're fine sharing publicly.
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The address you were on.
+      placeholder: e.g. https://freeupscale.app/anime-upscaler/
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: e.g. Chrome 131, Safari 18, Firefox 133
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      options:
+        - Computer (Windows)
+        - Computer (macOS)
+        - Computer (Linux / ChromeOS)
+        - Phone or tablet (Android)
+        - Phone or tablet (iPhone / iPad)
+    validations:
+      required: true
+  - type: input
+    id: image
+    attributes:
+      label: Image
+      description: Format and size of the image, and the settings you picked.
+      placeholder: e.g. JPG 1200×800, Drawing, 4x, Clean-up Auto
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you expected, what you got, and any error message on the page.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open '...'
+        2. Drop the image and press '...'
+        3. See '...'
